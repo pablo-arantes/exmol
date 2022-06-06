@@ -46,7 +46,8 @@ def insert_svg(
     size = mol_size
     mol_svgs = _mol_images(exps, mol_size, mol_fontsize, True)
     rewrites = {f"rdkit-img-{i}": v for i, v in enumerate(mol_svgs)}
-    svg = skunk.pltsvg(bbox_inches="tight")
+#     svg = skunk.pltsvg(bbox_inches="tight")
+    svg = skunk.pltsvg(pad_inches="tight")
     return skunk.insert(rewrites, svg=svg)
 
 
